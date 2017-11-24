@@ -74,8 +74,8 @@ public class SoundManager : MonoBehaviour {
     {
         musicSource.volume = slider.value;
 
-        PauseMscVolSlider.value = musicSource.volume;
-        MainMscSlider.value = musicSource.volume;
+        //PauseMscVolSlider.value = musicSource.volume;
+        //MainMscSlider.value = musicSource.volume;
     }
 
     // invoke when slider button is clicked
@@ -83,8 +83,8 @@ public class SoundManager : MonoBehaviour {
     {
         efxSource.volume = slider.value;
 
-        PauseEfxVolSlicer.value = efxSource.volume;
-        MainEfxVolSlider.value = efxSource.volume;
+        //PauseEfxVolSlicer.value = efxSource.volume;
+        //MainEfxVolSlider.value = efxSource.volume;
     }
 
 }
