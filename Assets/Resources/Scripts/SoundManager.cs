@@ -68,8 +68,7 @@ public class SoundManager : MonoBehaviour {
         efxSource.Play();
         
     }
-
-<<<<<<< HEAD
+    
     // invoked when slider button is clicked.
     public void ChangeMusicVol(Slider slider)
     {
@@ -87,8 +86,6 @@ public class SoundManager : MonoBehaviour {
         //PauseEfxVolSlicer.value = efxSource.volume;
         //MainEfxVolSlider.value = efxSource.volume;
     }
-=======
->>>>>>> 92391a3b13caa83a70508721b02ad619ce4fce1e
 
 }
 
