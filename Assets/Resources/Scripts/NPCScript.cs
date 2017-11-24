@@ -15,9 +15,7 @@ public interface IInteractable              //Ser till att spelaren kan interage
 public class NPCScript : MonoBehaviour, IInteractable
 {
     GameObject interactionButton;
-
-    Material myMat;
-
+    
     public string MyDialogueNode
     {
         get { return this.myDialogueNode; }
@@ -25,10 +23,7 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     [SerializeField]
     string myDialogueNode;
-
-    [SerializeField]
-    Material highlightMat;
-
+    
     DialogueRunner dR;
 
     NavMeshAgent agent;
@@ -44,7 +39,6 @@ public class NPCScript : MonoBehaviour, IInteractable
     {
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        myMat = GetComponent<Renderer>().material;
         if (agent.destination != null && GetComponent<Patrol>().Points.Length > 0)
         {
             anim.SetBool("isWalking", true);
@@ -66,9 +60,6 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     public void ShowAction(bool show)       //Visar att NPCn går att interagera med
     {
-        if (show && myDialogueNode != "null")
-            GetComponent<Renderer>().material = highlightMat;
-        else
-            GetComponent<Renderer>().material = myMat;
+        //Här ska det vara nåt sen, men det är det inte
     }
 }
