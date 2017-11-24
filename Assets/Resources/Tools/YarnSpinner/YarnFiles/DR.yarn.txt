@@ -84,18 +84,11 @@ position: 808,759
 <<ChangePortrait Portrait UI_Portrait_Laura>>
 ->“Yes, I think I can help you. I know a lot of people around the hovels, so it shouldn't be a problem.”
     <<ChangePortrait Portrait UI_Portrait_DR>>
-    %“Superb! I believe there is a kit lying around here somewhere.” The doctor rummages through his med. station, looking for something “Ah! Here are ten vials.” Aurum gives you a vaccination kit and something that looks like a weird gun. “Just give a patient a shot from this jet injector in the shoulder, and remember to reload the injector with a new vial for each patient. Good luck Ms. Lynn and I’ll see you after you have completed your assignment!”
+    %“Superb! I believe there is a kit lying around here somewhere.” The doctor rummages through his med. station, looking for something “Ah! Here are three vials.” Aurum gives you a vaccination kit and something that looks like a weird gun. “Just give a patient a shot from this jet injector in the shoulder, and remember to reload the injector with a new vial for each patient. Good luck Ms.Lynn and I’ll see you after you have completed your assignment!”
     <<set $DR_Quest to true>>
-    <<set $Vaccines to 10>>
+    <<set $Vaccines to 3>>
     <<set $Syringe to 1>>
     <<AddItem Inventory Syringe>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
-    <<AddItem Inventory Vaccine>>
     <<AddItem Inventory Vaccine>>
     <<AddItem Inventory Vaccine>>
     <<AddItem Inventory Vaccine>>

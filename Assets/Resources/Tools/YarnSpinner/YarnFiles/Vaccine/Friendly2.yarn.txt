@@ -1,0 +1,34 @@
+title: Friendly2.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $DR_Quest is true>>
+    <<if $Friendly2 is true>>
+        [[Friendly2_Alt]]
+    <<endif>>
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“Excuse me! Hi! I’m helping the MSA to distribute a vaccine. Would you consider receiving an injection?”
+    <<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+    %“Hi! The MSA you say? I’ve always hold them in high regards. Sure, you can give me an injection.” The person roll up their sleeve and hold out their arm for you to inject. 
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“Great!” You hold the individual's wrist gently and press the jet injector against their shoulder. The jet injector makes a *pysht* sound when you activate it. “There you go, you’re all set. Thank you and goodbye!”
+    <<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+    %“No, thank you! Bye.”
+    <<set $Friendly2 to true>>
+    <<set $Vaccines to $Vaccines - 1>>
+    <<RemoveItem Inventory Vaccine>>
+    <<if $Vaccines is 0>>
+        <<set $Syringe to 0>>
+        <<RemoveItem Inventory Syringe>>
+    <<endif>>
+<<endif>>
+===
+title: Friendly2_Alt
+tags: 
+colorID: 0
+position: 887,274
+---
+<<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+%“Thank you! Bye.”
+===
