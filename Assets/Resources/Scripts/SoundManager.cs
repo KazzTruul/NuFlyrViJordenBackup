@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
 
-    private AudioSource musicSource; // GameObject.Camera.fin
-    private AudioSource efxSource;
+    public AudioSource musicSource;
+    public AudioSource efxSource;
 
-    private Slider PauseMscVolSlider;
-    private Slider PauseEfxVolSlicer;
-    private Slider MainMscSlider;
-    private Slider MainEfxVolSlider;
+    //private Slider PauseMscVolSlider;
+    //private Slider PauseEfxVolSlicer;
+    //private Slider MainMscSlider;
+    //private Slider MainEfxVolSlider;
 
     private float lowPitchLimit = 0.95f;
     private float highPitchLimit = 1.05f;
@@ -53,7 +53,7 @@ public class SoundManager : MonoBehaviour {
         musicSource.Play();
     }
 
-    // used to play random clips at somewhat random pitch. <------------------- use for walking.
+    // used to play random clips at somewhat random pitch. <------------------- use for walking?!
     public void PlayRandom(params AudioClip[] clips)
     {
         //chose random clip in range.
