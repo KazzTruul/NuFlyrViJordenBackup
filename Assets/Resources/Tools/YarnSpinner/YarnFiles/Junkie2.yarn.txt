@@ -1,0 +1,35 @@
+title: Junkie2.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $Junkie2 is true>>
+    [[Junkie2_Thanks]]
+<<endif>>
+
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura looks at the person in front of her, a terrible sight to behold. Laura have seen these people before but never so up close. A shiver runs down her spine. “Hey you…” Before Laura gets to finish her sentence the man beggingly says…
+<<ChangePortrait Portrait UI_Portrait_Junkie>>
+%“Please! Do you have any of that special larva? I just need a little i promise.” The junkie reaches out with his hand trying to grab Laura’s.
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+¤Laura moves her hand away…
+-> “I don’t have anything, I’m sorry” [LEAVE]
+->“If you can pay for it, I got just what you need” <<if $Crushed_Larvae gte 1>>
+    <<set $Crushed_Larvae to ($Crushed_Larvae - 1)>>
+    <<RemoveItem Inventory Crushed_Larvae>>
+    <<set $Junkie2 to true>>
+    <<ChangePortrait Portrait UI_Portrait_Junkie>>
+    %The junkie quickly searches through his pockets and manages to find a few coins and holds them forth. “Here! It’s all I have for now, please!”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤Laura takes the coins and gives him one jar of the crushed larva.
+    <<ChangePortrait Portrait UI_Portrait_Junkie>>
+    %“Thank you, thank you! Most kind lady.”
+===
+title: Junkie2_Thanks
+tags: 
+colorID: 0
+position: 810,269
+---
+<<ChangePortrait Portrait UI_Portrait_Junkie>>
+%“Hi there, kind bug lady! I feel muuuuch better now, thank you.” 
+===

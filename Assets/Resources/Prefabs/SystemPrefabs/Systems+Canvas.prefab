@@ -385,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1861019105792796
 GameObject:
   m_ObjectHideFlags: 1
@@ -1056,6 +1056,11 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 3eb0189d4384f3d428e49dcf3bb8b51b, type: 3}
   - {fileID: 4900000, guid: 911bb5107007ea743a4ba81bbc0acfbd, type: 3}
   - {fileID: 4900000, guid: cce11ed0c0753b943b22b5f64a6e84ed, type: 3}
+  - {fileID: 4900000, guid: 57ac17824a6e95b429dea20389e2c688, type: 3}
+  - {fileID: 4900000, guid: 3c6a47bf063edf24bb484ba7383752fa, type: 3}
+  - {fileID: 4900000, guid: 40060895000c96b4fbad4c0c0d0546ee, type: 3}
+  - {fileID: 4900000, guid: 4c9a55652054c444c8747a53d2e18755, type: 3}
+  - {fileID: 4900000, guid: 21eae749a01d98b48a98492987a125b6, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -1241,12 +1246,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b0e5174302e4fc64da48e46d891c0244, type: 3}
   - {fileID: 21300000, guid: 2f08ac98257608844b9ae40a422bb70b, type: 3}
   - {fileID: 21300000, guid: df11c2e22b877e84b9a265b6e3b444a0, type: 3}
-  - {fileID: 21300000, guid: 11da363f47e528c46b5973be8869e081, type: 3}
-  - {fileID: 21300000, guid: 2e92829e5c5ce774a92539b50ffa0ae4, type: 3}
-  - {fileID: 21300000, guid: 0e7ad5afba885a245983fb2c33c198a0, type: 3}
-  - {fileID: 21300000, guid: 31c2507361e185c48a246d1b74b0fbb6, type: 3}
-  - {fileID: 21300000, guid: 7e49f3ae0ed899346b2d39dc7d32e854, type: 3}
-  - {fileID: 21300000, guid: fec38b5f0c5d6dd4ba6f65fc2c68f866, type: 3}
+  - {fileID: 21300000, guid: d8f8e68631397a24981b08406b11499e, type: 3}
+  - {fileID: 21300000, guid: 79ecbd92d72f8894b8e1981c671cf751, type: 3}
+  - {fileID: 21300000, guid: 4bb0721de74f8944983422281174aeb1, type: 3}
+  - {fileID: 21300000, guid: a608093b8818fee4bb0f8288e892e0f2, type: 3}
+  - {fileID: 21300000, guid: a94843e929894664899cea7c8dbdc926, type: 3}
+  - {fileID: 21300000, guid: b61bb3395410e2346981f017f0ffbb08, type: 3}
+  - {fileID: 21300000, guid: 69a294530aa64ed4390937b3d2a1a3a5, type: 3}
 --- !u!114 &114538131621854632
 MonoBehaviour:
   m_ObjectHideFlags: 1
