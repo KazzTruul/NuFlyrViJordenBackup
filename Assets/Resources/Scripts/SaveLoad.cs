@@ -19,7 +19,11 @@ public class SaveLoad : MonoBehaviour
     [SerializeField]
     CameraBehaviour cameraBehaviour;
 
+    [SerializeField]
+    Inventory inventory;
+
     public List<DoorScript> doors;
+
 
 
 
@@ -43,7 +47,12 @@ public class SaveLoad : MonoBehaviour
             sw.WriteLine("x" + playerTransform.position.x + " " + playerTransform.position.y + " " + playerTransform.position.z);
             for (int i = 0; i < doors.Count; i++)
             {
-                sw.WriteLine("I" + i + " " + doors[i].inBool);
+                sw.WriteLine("D" + i + " " + doors[i].inBool);
+            }
+
+            for (int i = 0; i < inventory.inventory.Count; i++)
+            {
+                sw.WriteLine("I" + inventory.inventory[i].itemName);
             }
 
             foreach (string s in storage.GetVariableNames())
@@ -131,7 +140,7 @@ public class SaveLoad : MonoBehaviour
                             cameraBehaviour.SetFollow();
                             break;
 
-                        case 'I': //Ute/Inne
+                        case 'D': //Ute/Inne
 
                             int doorID = Convert.ToInt32(line.Substring(1, line.IndexOf(" ")));
                             bool inBool = Convert.ToBoolean(line.Substring(line.LastIndexOf(" ") + 1));
@@ -143,6 +152,13 @@ public class SaveLoad : MonoBehaviour
                                     doors[i].WalkThroughDoor(inBool);
                                 }
                             }
+
+                            break;
+                        case 'I':
+
+                            string itemName = line.Substring(1);
+
+                            inventory.AddItem(itemName);
 
                             break;
 
@@ -159,3 +175,5 @@ public class SaveLoad : MonoBehaviour
         }
     }
 }
+
+// Andreas Halldin
