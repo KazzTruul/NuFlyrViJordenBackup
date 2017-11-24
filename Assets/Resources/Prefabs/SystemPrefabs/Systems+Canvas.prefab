@@ -1056,11 +1056,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 3eb0189d4384f3d428e49dcf3bb8b51b, type: 3}
   - {fileID: 4900000, guid: 911bb5107007ea743a4ba81bbc0acfbd, type: 3}
   - {fileID: 4900000, guid: cce11ed0c0753b943b22b5f64a6e84ed, type: 3}
-  - {fileID: 4900000, guid: 57ac17824a6e95b429dea20389e2c688, type: 3}
-  - {fileID: 4900000, guid: 3c6a47bf063edf24bb484ba7383752fa, type: 3}
-  - {fileID: 4900000, guid: 40060895000c96b4fbad4c0c0d0546ee, type: 3}
-  - {fileID: 4900000, guid: 4c9a55652054c444c8747a53d2e18755, type: 3}
-  - {fileID: 4900000, guid: 21eae749a01d98b48a98492987a125b6, type: 3}
+  - {fileID: 4900000, guid: 3c5fdb3d5e50474459e01899aec576f3, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
