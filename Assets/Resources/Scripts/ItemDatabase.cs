@@ -6,11 +6,6 @@ public class ItemDatabase : MonoBehaviour {
 
     //list of all items in game
     public List<Item> items = new List<Item>();
-    
-    public List<Item> Items
-    {
-        get { return this.items; }
-    }
 
     private void Start()
     {
