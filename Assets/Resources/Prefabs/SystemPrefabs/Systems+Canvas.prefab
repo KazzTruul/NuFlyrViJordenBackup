@@ -1057,6 +1057,16 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 911bb5107007ea743a4ba81bbc0acfbd, type: 3}
   - {fileID: 4900000, guid: cce11ed0c0753b943b22b5f64a6e84ed, type: 3}
   - {fileID: 4900000, guid: 3c5fdb3d5e50474459e01899aec576f3, type: 3}
+  - {fileID: 4900000, guid: b16238904d5220242a8a144e2399e269, type: 3}
+  - {fileID: 4900000, guid: 3c6a47bf063edf24bb484ba7383752fa, type: 3}
+  - {fileID: 4900000, guid: 40060895000c96b4fbad4c0c0d0546ee, type: 3}
+  - {fileID: 4900000, guid: 4c9a55652054c444c8747a53d2e18755, type: 3}
+  - {fileID: 4900000, guid: 21eae749a01d98b48a98492987a125b6, type: 3}
+  - {fileID: 4900000, guid: b9ccc01204b36e54e9a9b7802c74295d, type: 3}
+  - {fileID: 4900000, guid: 02840dc5be66f0447bf87fd9d48858dd, type: 3}
+  - {fileID: 4900000, guid: 088c5a5cb91d0184589ac35b13da4a98, type: 3}
+  - {fileID: 4900000, guid: 546bf443f2ac7c6458a0794afdf391af, type: 3}
+  - {fileID: 4900000, guid: 1c7c57b905295324188114c5f6307de2, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -1176,6 +1186,7 @@ MonoBehaviour:
   file: SaveFile
   playerTransform: {fileID: 0}
   cameraBehaviour: {fileID: 0}
+  inventory: {fileID: 0}
   doors:
   - {fileID: 0}
 --- !u!114 &114527862590635330

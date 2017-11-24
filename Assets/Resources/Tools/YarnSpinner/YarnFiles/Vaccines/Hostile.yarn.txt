@@ -1,0 +1,12 @@
+title: Hostile.yarn
+tags: 
+colorID: 0
+position: 540,260
+---
+<<if $DR_Quest is true>>
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
+    ¤“Excuse me! Hi! I’m helping the MSA to distribute a vaccine. Would you consider receiving an injection?”
+    <<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+    %The person looks at you like your mad and exclaims “That ain’t happening!”
+<<endif>>
+===
