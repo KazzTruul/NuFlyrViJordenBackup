@@ -15,7 +15,7 @@ position: 540,260
 ¤Laura moves her hand away…
 -> “I don’t have anything, I’m sorry” [LEAVE]
 ->“If you can pay for it, I got just what you need” <<if $Crushed_Larvae gte 1>>
-    <<set $Crushed_Larvae to ($Crushed_Larvae - 1)>>
+    <<set $Crushed_Larvae to $Crushed_Larvae - 1>>
     <<RemoveItem Inventory Crushed_Larvae>>
     <<set $Junkie2 to true>>
     <<ChangePortrait Portrait UI_Portrait_Junkie>>
