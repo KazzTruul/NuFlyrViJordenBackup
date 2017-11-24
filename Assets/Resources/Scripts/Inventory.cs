@@ -22,9 +22,9 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
-    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
+    //-----------------------------------------      TILLSVIDARE     ---------------------------------------------------------------
     int indexitem = 0;
-    //-----------------------------------------    TILLSVIDARE   ------------------------------------------------------------------------------------------------------------------------------
+    //-----------------------------------------   TILLSVIDARE  SLUT  ---------------------------------------------------------------
 
     private void Awake()
     {
@@ -83,35 +83,24 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        //-----------------------------------------    TILLSVIDARE Lägger till och ta bort item i inventory ---------------------------------------------------------------
+        //-----------------------------------------    TILLSVIDARE ----------------------------------------------------------
 
 
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
         {
-            inventory[indexitem] = database.Items[indexitem];
+            inventory[indexitem] = database.items[indexitem];
             indexitem++;
-            Debug.Log("Item added. indexitem = " + indexitem);
+            Debug.Log("Item added. indexitem = " + indexitem);   
+        }
 
-            if (Input.GetKeyDown(KeyCode.Keypad1) && indexitem < 1 && indexitem >= 0)
-            {
-                inventory[indexitem] = database.items[indexitem];
-                indexitem++;
-                Debug.Log("Item added. indexitem = " + indexitem);
-
-
-
-            }
-
-            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
-            {
-                RemoveItem(database.Items[indexitem - 1]);
-                indexitem--;
-                Debug.Log("item removed. indexitem = " + indexitem);
-            }
-
-            //-----------------------------------------    TILLSVIDARE   -------------------------------------------------------------------------------------------------------
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
+        {
+            RemoveItem(database.items[indexitem - 1]);
+            indexitem--;
+            Debug.Log("item removed. indexitem = " + indexitem);
         }
     }
+    //-----------------------------------------    TILLSVIDARE SLUT --------------------------------------------------------------------------
 
     //creates inventory if Inventorykey is pressed.
     private void OnGUI()
@@ -125,7 +114,7 @@ public class Inventory : MonoBehaviour
     }
 
 
-    // creates the inventory and loads in items.
+    //creates the visual inventory and loads in itemicons.
     public void OpenInventory()
     {
         int i = 0;
@@ -150,6 +139,7 @@ public class Inventory : MonoBehaviour
 
     }
 
+    //--------------------------------------------      TILLFÄLLIGT    --------------------------------------------------
 
     // used to remove item from inventory by itemname.
     public void RemoveItem(Item item)
@@ -165,11 +155,39 @@ public class Inventory : MonoBehaviour
 
     }
 
-
-    //OM MAN BARA SPARAR ID KAN VI LÄGGA TILL ITEM via database.items[ID] -----------------------------------------------------------------------------------------------------------------------------
     public void AddItem(Item item)
     {
         inventory.Add(item);
     }
- }
+    //-------------------------------------------- TILLFÄLLIGT  SLUT --------------------------------------------------
+
+
+    //used to remove item from inventory by name.
+    public void RemoveItem(string nameOfÍtem)
+    {
+        int removeIndex = -1;
+
+        removeIndex = inventory.FindIndex(i => i.itemName == nameOfÍtem);
+
+        if (removeIndex != -1)
+        {
+            inventory[removeIndex] = new Item();
+        }
+
+    }
+
+    // used to add item to inventory by name.
+    public void AddItem(string nameOfItem)
+    {
+        int databaseIndex = -1;
+
+        databaseIndex = database.items.FindIndex(i => i.itemName == nameOfItem);
+
+        if (databaseIndex != -1)
+        {
+            inventory[databaseIndex] = new Item();
+        }
+
+    }
+}
 
