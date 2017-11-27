@@ -99,6 +99,7 @@ position: 1341,-31
     <<ChangePortrait Portrait UI_Portrait_Jake>>
     %“Nice work love, maybe you’re worth something after all. I told the boss you had a favour to ask, so maybe you’ll get that help you so desperately needed. Jake lets out a chuckle and points to the metal doors. You can find her beyond those doors right there, the guards should let you in now…. oh, and watch what you say around Jade. She’ll make you disappear if you displease her in any way...”
     <<set $JakeApproach to 5>>
+    <<set $Bobby_Quest to true>>
 ===
 title: Jake_ThirdApproach
 tags: 
