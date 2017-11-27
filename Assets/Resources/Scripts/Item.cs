@@ -13,6 +13,7 @@ public class Item {
     public Texture2D itemIcon;
     public GameObject itemGo;
 
+
     public Item(string name, int id, string desc)
     {
         itemName = name;
@@ -21,7 +22,7 @@ public class Item {
         itemIcon = Resources.Load<Texture2D>("Sprites/UI/Item Icons/" + name);
         itemGo = Resources.Load<GameObject>("Sprites/UI/Item Prefabs/" + name);
     }
-    public Item()
+    public Item() //Gör ett tomt item
     {
 
     }

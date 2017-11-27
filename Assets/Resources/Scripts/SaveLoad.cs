@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
@@ -86,6 +87,7 @@ public class SaveLoad : MonoBehaviour
 
     public void Load()
     {
+        SceneManager.LoadScene("Andres_SceneDesignArea");
         try
         {
             using (StreamReader sr = new StreamReader(file))

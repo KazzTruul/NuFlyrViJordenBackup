@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
 
     public AudioSource musicSource;
     public AudioSource efxSource;
 
-    //private Slider PauseMscVolSlider;
-    //private Slider PauseEfxVolSlicer;
-    //private Slider MainMscSlider;
-    //private Slider MainEfxVolSlider;
+    public AudioClip MusicClip;
+
+    public Slider PauseMscVolSlider;
+    public Slider PauseEfxVolSlicer;
+    public Slider MainMscSlider;
+    public Slider MainEfxVolSlider;
 
     private float lowPitchLimit = 0.95f;
     private float highPitchLimit = 1.05f;
@@ -35,8 +38,10 @@ public class SoundManager : MonoBehaviour {
 
     private void Start()
     {
-        //REFERENS TILL SLIDER 1 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
-        //REFERENS TILL SLIDER 2 <-----------------------------------------------------------------------------------------------------------------------------------------------------------
+        if (SceneManager.GetActiveScene().name == "Andres_SceneDesignArea")
+        {
+            PlayMusic(MusicClip);
+        }
     }
 
     // used to play single soundclips.
@@ -70,21 +75,21 @@ public class SoundManager : MonoBehaviour {
     }
     
     // invoked when slider button is clicked.
-    public void ChangeMusicVol(Slider slider)
+    public void ChangeMusicVol(int value)
     {
-        musicSource.volume = slider.value;
+        musicSource.volume = value;
 
-        //PauseMscVolSlider.value = musicSource.volume;
-        //MainMscSlider.value = musicSource.volume;
+        PauseMscVolSlider.value = musicSource.volume;
+        MainMscSlider.value = musicSource.volume;
     }
 
     // invoke when slider button is clicked
-    public void ChangeEfxVol(Slider slider)
+    public void ChangeEfxVol(int value)
     {
-        efxSource.volume = slider.value;
+        efxSource.volume = value;
 
-        //PauseEfxVolSlicer.value = efxSource.volume;
-        //MainEfxVolSlider.value = efxSource.volume;
+        PauseEfxVolSlicer.value = efxSource.volume;
+        MainEfxVolSlider.value = efxSource.volume;
     }
 
 }

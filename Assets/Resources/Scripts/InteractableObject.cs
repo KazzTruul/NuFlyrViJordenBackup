@@ -13,6 +13,14 @@ public class InteractableObject : MonoBehaviour, IInteractable
     {
         myMat = GetComponent<Renderer>().material;
     }
+    string myDialogueNode;
+    public string DialogueNode
+    {
+        get
+        {
+            return myDialogueNode;
+        }
+    }
 
     public void DoAction()              //Initierar en dialog mellan spelaren och föremålet
     {

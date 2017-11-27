@@ -1,7 +1,7 @@
 title: Junkie5.yarn
 tags: 
 colorID: 0
-position: 540,260
+position: 542,260
 ---
 <<if $Junkie5 is true>>
     [[Junkie5_Thanks]]
@@ -14,7 +14,7 @@ position: 540,260
 <<ChangePortrait Portrait UI_Portrait_Laura>>
 ¤With a look of uncertainty and sorrow Laura closes her eyes and opens them again with a sigh.
 ->“I can’t help you”
-->“Yeah i got what you want, if you got the means to pay” <<if $Crushed_Larvae gte 1>>
+->“Yeah i got what you want, if you got the means to pay” <<if $Crushed_Larvae gt 0 && $Crushed_Larvae != null>>
     <<set $Crushed_Larvae to $Crushed_Larvae - 1>>
     <<RemoveItem Inventory Crushed_Larvae>>
     <<set $Junkie5 to true>>

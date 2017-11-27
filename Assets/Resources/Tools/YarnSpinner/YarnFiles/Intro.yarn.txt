@@ -3,6 +3,10 @@ tags:
 colorID: 0
 position: 622,2186
 ---
+<<if $Intro is true>>
+    [[Intro_Alt]]
+<<endif>>
+<<set $Intro to true>>
 <<ChangePortrait Portrait UI_Portrait_Norbert>>
 %"Hello Laura, Dottie. May I come in?"
 <<ChangePortrait Portrait UI_Portrait_Laura>> 
@@ -66,4 +70,11 @@ position: 948,2572
 ¤“What? No, of course not! Carl is like… twelve years old!” Laura gives Norbert a reassuring smile. “Don’t worry it’s no one from this place. He goes by the name ‘Snake’. Some outsider, totally non-threatening. I’ll stay out of trouble. I promise!”
 <<ChangePortrait Portrait Norbert>>
 %“Well… Just promise me you go see Bobby and don’t do anything stupid.” Norbert lets out a deep sigh. “Whatever you do I’m sure you’ll make the right choices.” Norbert gives you a comforting smile, but the concern in his eyes is obvious.
+===
+title: Intro_Alt
+tags: 
+colorID: 0
+position: 949,2230
+---
+
 ===

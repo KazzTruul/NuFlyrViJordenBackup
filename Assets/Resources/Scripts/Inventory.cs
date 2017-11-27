@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class Inventory : MonoBehaviour
 {
-
     //List of items in the inventory
     public List<Item> inventory = new List<Item>();
 
@@ -86,18 +86,14 @@ public class Inventory : MonoBehaviour
         //-----------------------------------------    TILLSVIDARE ----------------------------------------------------------
 
 
-    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1) && indexitem <= 2 && indexitem >= 0)
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1))
         {
-            inventory[indexitem] = database.items[indexitem];
-            indexitem++;
-            Debug.Log("Item added. indexitem = " + indexitem);   
+            AddItem("Crushed_Larvae");
         }
 
-    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2) && indexitem >= 1 && indexitem <= 3)
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2))
         {
-            RemoveItem(database.items[indexitem - 1]);
-            indexitem--;
-            Debug.Log("item removed. indexitem = " + indexitem);
+            RemoveItem("Crushed_Larvae");
         }
     }
     //-----------------------------------------    TILLSVIDARE SLUT --------------------------------------------------------------------------
@@ -163,20 +159,35 @@ public class Inventory : MonoBehaviour
 
 
     //used to remove item from inventory by name.
-    public void RemoveItem(string nameOfÍtem)
+    [YarnCommand("RemoveItem")]
+    public void RemoveItem(string nameOfItem)
     {
         int removeIndex = -1;
 
-        removeIndex = inventory.FindIndex(i => i.itemName == nameOfÍtem);
+        removeIndex = inventory.FindIndex(i => i.itemName == nameOfItem);
 
         if (removeIndex != -1)
         {
-            inventory[removeIndex] = new Item();
+            for (int i = removeIndex; i <= inventory.Count -1; i++)
+            {   
+                if (i < inventory.Count - 1)
+                {
+                    inventory[i] = inventory[i + 1];
+                }
+                
+                else
+                {
+                    inventory[i] = new Item();
+                    indexitem--;
+                }
+            }
         }
+
 
     }
 
     // used to add item to inventory by name.
+    [YarnCommand("AddItem")]
     public void AddItem(string nameOfItem)
     {
         int databaseIndex = -1;
@@ -185,7 +196,8 @@ public class Inventory : MonoBehaviour
 
         if (databaseIndex != -1)
         {
-            inventory[databaseIndex] = new Item();
+            inventory[indexitem] = database.items[databaseIndex];
+            indexitem++;
         }
 
     }

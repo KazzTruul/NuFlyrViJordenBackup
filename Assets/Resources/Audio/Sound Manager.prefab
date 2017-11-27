@@ -109,7 +109,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -189,7 +189,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -213,3 +213,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7449f72fd511bd348891b817d0ece77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicSource: {fileID: 82054289685871220}
+  efxSource: {fileID: 82414689345245438}
+  MusicClip: {fileID: 8300000, guid: 99cac2307967ed741afda62b497cf238, type: 3}
+  PauseMscVolSlider: {fileID: 0}
+  PauseEfxVolSlicer: {fileID: 0}
+  MainMscSlider: {fileID: 0}
+  MainEfxVolSlider: {fileID: 0}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-                                                                 /*By Björn Andersson*/
+                                                                                /*By Björn Andersson*/
 public class DaughterScript : MonoBehaviour, IInteractable
 {
     [SerializeField]
@@ -15,6 +15,15 @@ public class DaughterScript : MonoBehaviour, IInteractable
     Vector3 offset = new Vector3(-3f, 0f, -2f);
 
     Animator anim;
+
+    string myDialogueNode;
+    public string DialogueNode
+    {
+        get
+        {
+            return myDialogueNode;
+        }
+    }
 
     void Start()
     {

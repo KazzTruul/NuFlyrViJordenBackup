@@ -9,13 +9,13 @@ using UnityEngine.AI;
 public interface IInteractable              //Ser till att spelaren kan interagera med både föremål och NPCs via samma interface
 {
     void DoAction();
-    void ShowAction(bool show);
+    string DialogueNode { get; }
 }
 
 public class NPCScript : MonoBehaviour, IInteractable
 {
     GameObject interactionButton;
-    
+
     public string MyDialogueNode
     {
         get { return this.myDialogueNode; }
@@ -23,7 +23,14 @@ public class NPCScript : MonoBehaviour, IInteractable
 
     [SerializeField]
     string myDialogueNode;
-    
+    public string DialogueNode
+    {
+        get
+        {
+            return myDialogueNode;
+        }
+    }
+
     DialogueRunner dR;
 
     NavMeshAgent agent;
@@ -39,10 +46,14 @@ public class NPCScript : MonoBehaviour, IInteractable
     {
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        if (agent.destination != null && GetComponent<Patrol>().Points.Length > 0)
+        if (agent != null)
         {
-            anim.SetBool("isWalking", true);
+            if (agent.destination != null && GetComponent<Patrol>().Points.Length > 0)
+            {
+                anim.SetBool("isWalking", true);
+            }
         }
+
         dR = FindObjectOfType<DialogueRunner>();
     }
 
@@ -50,16 +61,13 @@ public class NPCScript : MonoBehaviour, IInteractable
     {
         if (myDialogueNode != "null")
         {
-            anim.SetBool("isWalking", false);
+            if (anim != null)
+                anim.SetBool("isWalking", false);
             FindObjectOfType<DialogueRunner>().CurrentAgent = GetComponent<NavMeshAgent>();
-            agent.isStopped = true;
+            if (agent != null)
+                agent.isStopped = true;
             FindObjectOfType<PlayerControls>().CurrentInteractable = null;
             dR.SetDialogue(myDialogueNode);
         }
-    }
-
-    public void ShowAction(bool show)       //Visar att NPCn går att interagera med
-    {
-        //Här ska det vara nåt sen, men det är det inte
     }
 }

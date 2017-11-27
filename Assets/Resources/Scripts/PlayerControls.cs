@@ -140,8 +140,8 @@ public class PlayerControls : MonoBehaviour
         IInteractable otherInterface = other.gameObject.GetComponent<IInteractable>();
         if (otherInterface != null)
         {
-            otherInterface.ShowAction(true);
-            interactButton.SetActive(true);
+            if (otherInterface.DialogueNode != "null")
+                interactButton.SetActive(true);
             currentInteractable = otherInterface;
         }
     }
@@ -151,9 +151,12 @@ public class PlayerControls : MonoBehaviour
         IInteractable otherInterface = other.gameObject.GetComponent<IInteractable>();
         if (otherInterface != null)
         {
-            otherInterface.ShowAction(false);
-            interactButton.SetActive(false);
-            currentInteractable = null;
+            if (otherInterface != null)
+            {
+                interactButton.SetActive(false);
+                currentInteractable = null;
+            }
+
         }
         else
         {
