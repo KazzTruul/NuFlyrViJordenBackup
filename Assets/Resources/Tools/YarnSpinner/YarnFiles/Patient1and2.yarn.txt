@@ -15,5 +15,7 @@ position: 901,255
     %"Ssuuuuure they are, love... sssuuure they are... " the apathetic one replies, just watching her interlocutor, soaking in her every move and expression as her own remains unchanged. 
     <<ChangePortrait Portrait UI_Portrait_Laura>>
     ¤"....." she stood in place, not feeling a need to inquire about anything nor interject, before moving on.
+<<else>>
+...
 <<endif>>
 ===
