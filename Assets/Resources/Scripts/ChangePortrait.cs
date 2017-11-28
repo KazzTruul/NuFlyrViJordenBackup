@@ -6,9 +6,18 @@ using UnityEngine.UI;
 /*By Björn Andersson*/
 public class ChangePortrait : MonoBehaviour
 {
+    [SerializeField]
+    AudioClip doctorClip, defaultClip;
 
     [SerializeField]
     Sprite[] sprites;
+
+    SoundManager sM;
+
+    void Start()
+    {
+        sM = FindObjectOfType<SoundManager>();
+    }
 
     [YarnCommand("ChangePortrait")]
     public void ChangeSprite(string newSprite)          //Byter porträttet som visas under konversationer
@@ -16,9 +25,11 @@ public class ChangePortrait : MonoBehaviour
         if (newSprite == "UI_Portrait_DR")
         {
             StartCoroutine("AnimateDoctor");
+            sM.musicClip = doctorClip;
         }
         else
         {
+            sM.musicClip = defaultClip;
             StopCoroutine("AnimateDoctor");
             UpdateSprite(newSprite);
         }

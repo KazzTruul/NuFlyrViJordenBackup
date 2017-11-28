@@ -6,6 +6,6 @@ public class Jakeend : MonoBehaviour {
 
 	void OnTriggerEnter()
     {
-        GameObject.Find("FinishGame").GetComponent<GameOver>().GameEnd("Prison");
+        GameObject.Find("FinishGame").GetComponent<GameOver>().GameEnd("SMU");
     }
 }

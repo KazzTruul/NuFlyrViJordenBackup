@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SoundManager : MonoBehaviour {
+public class SoundManager : MonoBehaviour
+{
 
     public AudioSource musicSource;
     public AudioSource efxSource;
@@ -21,8 +22,13 @@ public class SoundManager : MonoBehaviour {
 
     public static SoundManager instance;
 
+    public AudioClip musicClip
+    {
+        set { if (value != MusicClip) PlayMusic(value); this.MusicClip = value; }
+    }
+
     private void Awake()
-    {   
+    {
         if (instance == null)
         {
             instance = this;
@@ -71,9 +77,9 @@ public class SoundManager : MonoBehaviour {
 
         //play clip
         efxSource.Play();
-        
+
     }
-    
+
     // invoked when slider button is clicked.
     public void ChangeMusicVol(int value)
     {

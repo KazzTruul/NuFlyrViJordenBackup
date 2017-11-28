@@ -4365,6 +4365,11 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!4 &206307222 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1394143869}
 --- !u!1001 &207711125
 Prefab:
   m_ObjectHideFlags: 0
@@ -12368,7 +12373,7 @@ Prefab:
     - target: {fileID: 114432614620800052, guid: e5ee23a07c13e464db4e1c40f60fbd0f,
         type: 2}
       propertyPath: myDialogueNode
-      value: null
+      value: BMThug
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5ee23a07c13e464db4e1c40f60fbd0f, type: 2}
@@ -13885,6 +13890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab55965c4e2cf24e9c35600f6fb4ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doctorClip: {fileID: 8300000, guid: b6ee11f0ac044f84b80730d005d68271, type: 3}
+  defaultClip: {fileID: 8300000, guid: 78c58e5e6f52b7b49bb7bf24e7bddd5a, type: 3}
   sprites:
   - {fileID: 21300000, guid: b39f0475ac2c0ea4abdd9265a5dd3504, type: 3}
   - {fileID: 21300000, guid: 8421e06698d354e419077ca73d62a427, type: 3}
@@ -13899,7 +13906,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9adc2b28d9b1aa749b82a2011ae4dde8, type: 3}
   - {fileID: 21300000, guid: 49c63ddf109b9f94b898b052d59528b4, type: 3}
   - {fileID: 21300000, guid: d74f1fe74319c6847958d51bae7368a3, type: 3}
-  - {fileID: 21300000, guid: feca7c40fb710a7448629d8886fd1cd7, type: 3}
+  - {fileID: 21300000, guid: d67491ac51069ca459cf39997e6f010a, type: 3}
   - {fileID: 21300000, guid: 869f9b901478aa24596aa53d30cf6775, type: 3}
   - {fileID: 21300000, guid: 4b75d3e03b37b8d439337f9e64f3b32e, type: 3}
   - {fileID: 21300000, guid: b0e5174302e4fc64da48e46d891c0244, type: 3}
@@ -13914,6 +13921,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 69a294530aa64ed4390937b3d2a1a3a5, type: 3}
   - {fileID: 21300000, guid: 0541988d19471d24b980b47ee108d286, type: 3}
   - {fileID: 21300000, guid: f475a7aaa3193cf46acc7f2f796753ed, type: 3}
+  - {fileID: 21300000, guid: f9ae35e157307d040b6b7a30ef8e7da9, type: 3}
 --- !u!114 &794778058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15220,7 +15228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1366157359843362, guid: 21e5088b7b46f4c439b0c95b54564034, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21e5088b7b46f4c439b0c95b54564034, type: 2}
@@ -16656,6 +16664,7 @@ Transform:
   - {fileID: 1750080170}
   - {fileID: 1245312592}
   - {fileID: 1166461337}
+  - {fileID: 206307222}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22234,7 +22243,7 @@ Prefab:
     - target: {fileID: 114360410612250142, guid: 22ade85547e149140aeecce0088015ee,
         type: 2}
       propertyPath: myDialogueNode
-      value: Erwan.yarn
+      value: Norbert.yarn
       objectReference: {fileID: 0}
     - target: {fileID: 4515976426743728, guid: 22ade85547e149140aeecce0088015ee, type: 2}
       propertyPath: m_LocalScale.x
@@ -25123,6 +25132,69 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885d482559658aa438896ed049273c33, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1394143869
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 952821935}
+    m_Modifications:
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -68.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.440613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -93.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.18087906
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.98350537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608390496604146, guid: a6aa91c7191ae024aa4d19684b80ff3c,
+        type: 2}
+      propertyPath: myDialogueNode
+      value: TammySamCarl.yarn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 20.842001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216410044176222, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508279261659286, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
+      propertyPath: m_Name
+      value: TammyPrefab (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a6aa91c7191ae024aa4d19684b80ff3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1394873112
 Prefab:

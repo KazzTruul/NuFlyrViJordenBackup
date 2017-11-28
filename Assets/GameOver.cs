@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour {
 	[YarnCommand("GameEnd")]
     public void GameEnd(string ending)
     {
-        SceneManager.LoadScene(ending);
+        PlayerPrefs.SetString("Ending", ending);
+        SceneManager.LoadScene("EndOfTheGame");
     }
 }

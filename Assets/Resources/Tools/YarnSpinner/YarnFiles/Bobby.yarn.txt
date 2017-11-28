@@ -133,5 +133,5 @@ position: -463,443
 ---
 <<ChangePortrait Portrait UI_Portrait_Bobby>>
 %Bobby brightens up and gives Laura a big smile. “Great! I knew I could count on you, I'll get you into the Projects tomorrow, dont worry. Sleep tight.”
-<<GameEnd FinishGame Prison>>
+<<GameEnd FinishGame ENF>>
 ===

@@ -107,12 +107,12 @@ position: 1134,142
 <<ChangePortrait Portrait UI_Portrait_Laura>>
 ->“Hi Doctor Aurum!”
     <<ChangePortrait Portrait UI_Portrait_DR>>
-    %Dr. Aurum looks up from his tablet and smiles at you “Well Hello Ms. Lynn! Have you found ten willing subjects?”
+    %Dr. Aurum looks up from his tablet and smiles at you “Well Hello Ms. Lynn! Have you found three willing subjects?”
     <<ChangePortrait Portrait UI_Portrait_Laura>>
     ->“Yes, Dr. Aurum I inoculated three people, just as you asked” You hand back the jet injector and the now empty vials to the Doctor. <<if $Syringe is 0>>
         <<ChangePortrait Portrait UI_Portrait_DR>>
         %“Excellent Ms. Lynn! It seems you’re quite a valuable asset to the MSA.” The doctor looks content with your effort just before he starts patting his lab coat and looking a bit confused. “I could have sworn I put it somewhere around here… Ah!” He pulls out a keycard and gives it to you. “This keycard gives you access to the projects. The MSA have other medical facilities there that need assistance from competent individuals like yourself. Good day Ms. Lynn!”
-        <<GameEnd FinishGame Mars>>
+        <<GameEnd FinishGame MSA>>
     ->“No, not yet Dr. Aurum. I’m doing my best.” 
         <<ChangePortrait Portrait UI_Portrait_DR>>
         %“Well then…” The doctor looks slightly annoyed, and starts tapping the side of his tablet with his finger. “Then you better get to it Ms. Lynn, I wouldn’t say you’re out of time, but time is running short. I will see you later!”
