@@ -14,9 +14,17 @@ public class PauseGame : MonoBehaviour
     public Transform canvas;
 
     bool canPause = true, paused = false;
+    public bool Paused
+    {
+        get
+        {
+            return paused;
+        }
+    }
 
     public bool CanPause
     {
+        get { return canPause; }
         set { this.canPause = value; }
     }
 

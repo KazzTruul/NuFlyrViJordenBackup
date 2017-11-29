@@ -92,12 +92,15 @@ position: 808,759
     <<AddItem Inventory Vaccine>>
     <<AddItem Inventory Vaccine>>
     <<AddItem Inventory Vaccine>>
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
 ->“No, I don’t want to help the MSA with that sort of assignment. If people wanted to get inoculated they would come to you.”
     <<ChangePortrait Portrait UI_Portrait_DR>>
     %Doctor Aurum sighs, he looks drained of energy and mutters under his breath “It seems getting good help here is even harder than I would have expected.” Then he speaks up “Farewell Ms. Lynn! ...I’ll see you on the ship.”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
 ->“Not at the moment.”
     <<ChangePortrait Portrait UI_Portrait_DR>>
     %“Too bad!” The doctor looks a bit disappointed, but continues with a hint of hope. “The opportunity to assist the MSA will remain for some additional days to come. Should you have a change of heart, you’ll find us here. I hope to see you again Ms. Lynn!”
+    <<ChangePortrait Portrait UI_Portrait_Laura>>
 ===
 title: DR_Quest
 tags: 
@@ -116,5 +119,6 @@ position: 1134,142
     ->“No, not yet Dr. Aurum. I’m doing my best.” 
         <<ChangePortrait Portrait UI_Portrait_DR>>
         %“Well then…” The doctor looks slightly annoyed, and starts tapping the side of his tablet with his finger. “Then you better get to it Ms. Lynn, I wouldn’t say you’re out of time, but time is running short. I will see you later!”
+        <<ChangePortrait Portrait UI_Portrait_Laura>>
 ->“Excuse me, I didn’t mean to bother you.”
 ===
