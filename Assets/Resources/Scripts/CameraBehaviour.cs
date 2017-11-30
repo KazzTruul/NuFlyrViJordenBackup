@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*By Björn Andersson && Timmy Alvelöv*/
+                                                            /*By Björn Andersson && Timmy Alvelöv*/
 public class CameraBehaviour : MonoBehaviour
 {
     [SerializeField]

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+                                                        //By Björn Andersson
 public class IntroSequenceScript : MonoBehaviour
 {
 
@@ -14,7 +14,6 @@ public class IntroSequenceScript : MonoBehaviour
 
     void Awake()
     {
-        print("being destroyed");
         StartCoroutine("DestroyMe");
     }
 
@@ -30,9 +29,7 @@ public class IntroSequenceScript : MonoBehaviour
 
     IEnumerator DestroyMe()
     {
-        print(timer);
         yield return new WaitForSeconds(timer);
-        print("BOOM");
         canvas.gameObject.SetActive(true);
         Destroy(this.gameObject);
     }

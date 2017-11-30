@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
 using Yarn.Unity;
-/*Modified by Björn Andersson && Timmy Alvelöv*/
+                                                                /*Modified by Björn Andersson && Timmy Alvelöv*/
 public class DialogueUI : Yarn.Unity.DialogueUIBehaviour
 {
     /// The object that contains the dialogue and the options.

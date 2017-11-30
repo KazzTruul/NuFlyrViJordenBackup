@@ -9,6 +9,9 @@ public class SaveLoad : MonoBehaviour
 {
 
     [SerializeField]
+    GameObject SaveImage;
+
+    [SerializeField]
     ExampleVariableStorage storage;
 
     [SerializeField]
@@ -24,16 +27,26 @@ public class SaveLoad : MonoBehaviour
     Inventory inventory;
 
     public List<DoorScript> doors;
+    PlayerControls pC;
 
-
-
+    void Start()
+    {
+        pC = FindObjectOfType<PlayerControls>();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F5))
+        if (pC.InputEnabled)
         {
-            print("Saved");
-            Save();
+            if (Input.GetKeyDown(KeyCode.F5))
+            {
+                print("Saved");
+                Save();
+            }
+            if (Input.GetKeyDown(KeyCode.F8))
+            {
+                Load();
+            }
         }
     }
 
@@ -79,8 +92,15 @@ public class SaveLoad : MonoBehaviour
             }
 
         }
+        StartCoroutine(SaveSuccessful());
     }
+    IEnumerator SaveSuccessful()
+    {
+        SaveImage.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SaveImage.SetActive(false);
 
+    }
     public void Load()
     {
         if (SceneManager.GetActiveScene().name != "Andres_SceneDesignArea")

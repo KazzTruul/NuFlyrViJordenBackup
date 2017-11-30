@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 using UnityEngine.UI;
-/*By Björn Andersson*/
+                                                                    /*By Björn Andersson*/
 public class ChangePortrait : MonoBehaviour
 {
     [SerializeField]

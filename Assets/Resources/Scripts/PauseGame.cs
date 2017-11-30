@@ -1,5 +1,5 @@
 ﻿/*
- * Skapad av: Andres Ramiréz
+ * Skapad av: Andrés Ramíréz and Björn Andersson
  * 2017-11-13 
  * 
  */

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class fadein : MonoBehaviour {
-
+                                                                        //By Mattias Eriksson
     float fader = 0.002f;
     [SerializeField]
     GameObject MSA;

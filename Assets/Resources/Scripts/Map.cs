@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Map : MonoBehaviour {
-
+                                                                    //Timmy Alvelöv
     bool toggle = true;
     GameObject map;
     PauseGame pG;
