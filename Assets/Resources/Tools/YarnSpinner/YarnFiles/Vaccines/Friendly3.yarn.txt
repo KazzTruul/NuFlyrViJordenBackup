@@ -22,6 +22,11 @@ position: 540,260
         <<set $Syringe to 0>>
         <<RemoveItem Inventory Syringe>>
     <<endif>>
+<<else>>
+<<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+"Hi! What do you have on your mind? You look a bit worried"
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+"Oh, nothing in particular, bye!"
 <<endif>>
 ===
 title: Friendly3_Alt

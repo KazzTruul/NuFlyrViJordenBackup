@@ -8,5 +8,8 @@ position: 540,260
     ¤“Excuse me! Hi! I’m helping the MSA to distribute a vaccine. Would you consider receiving an injection?”
     <<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
     %The person looks at you like your mad and exclaims “That ain’t happening!”
+<<else>>
+<<ChangePortrait Portrait UI_Portrait_SlumCapMale>>
+"I can't explain to you how much I hate vaccienes, they have an adverse effect on your mental health!" 
 <<endif>>
 ===

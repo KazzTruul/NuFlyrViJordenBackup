@@ -30,14 +30,10 @@ public class SaveLoad : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.F5))
         {
             print("Saved");
             Save();
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            Load();
         }
     }
 
@@ -87,7 +83,8 @@ public class SaveLoad : MonoBehaviour
 
     public void Load()
     {
-        SceneManager.LoadScene("Andres_SceneDesignArea");
+        if (SceneManager.GetActiveScene().name != "Andres_SceneDesignArea")
+            SceneManager.LoadScene("Andres_SceneDesignArea");
         try
         {
             using (StreamReader sr = new StreamReader(file))

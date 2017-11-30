@@ -21,10 +21,8 @@ public class Inventory : MonoBehaviour
     public int slotsX = 2, slotsY = 5;
 
     public static Inventory instance;
-
-    //-----------------------------------------      TILLSVIDARE     ---------------------------------------------------------------
+    
     int indexitem = 0;
-    //-----------------------------------------   TILLSVIDARE  SLUT  ---------------------------------------------------------------
 
     private void Awake()
     {
@@ -82,21 +80,7 @@ public class Inventory : MonoBehaviour
                 showInventory = false;
             }
         }
-
-        //-----------------------------------------    TILLSVIDARE ----------------------------------------------------------
-
-
-    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            AddItem("Crushed_Larvae");
-        }
-
-    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            RemoveItem("Crushed_Larvae");
-        }
     }
-    //-----------------------------------------    TILLSVIDARE SLUT --------------------------------------------------------------------------
 
     //creates inventory if Inventorykey is pressed.
     private void OnGUI()
@@ -134,30 +118,6 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
-    //--------------------------------------------      TILLFÄLLIGT    --------------------------------------------------
-
-    // used to remove item from inventory by itemname.
-    public void RemoveItem(Item item)
-    {
-        int removeIndex = -1;
-
-        removeIndex = inventory.FindIndex(i => i.itemID == item.itemID);
-
-        if (removeIndex != -1)
-        {
-            inventory[removeIndex] = new Item();
-        }
-
-    }
-
-    public void AddItem(Item item)
-    {
-        inventory.Add(item);
-    }
-    //-------------------------------------------- TILLFÄLLIGT  SLUT --------------------------------------------------
-
-
     //used to remove item from inventory by name.
     [YarnCommand("RemoveItem")]
     public void RemoveItem(string nameOfItem)

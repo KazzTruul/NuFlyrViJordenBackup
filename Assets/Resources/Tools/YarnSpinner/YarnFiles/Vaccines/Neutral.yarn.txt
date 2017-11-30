@@ -8,5 +8,12 @@ position: 540,260
     ¤“Excuse me! Hi! I’m helping the MSA to distribute a vaccine. Would you consider receiving an injection?”
     <<ChangePortrait Portrait UI_Portrait_SlumCapMale2>>
     %“Well I’m not sure…” The individual squirms at the thought. “I don’t really like injections. Do you even know what it does? Nah… Maybe some other time.”
+<<else>>
+<<ChangePortrait Portrait UI_Portrait_SlumCapMale2>>
+"Hmm?"
+<<ChangePortrait Portrait UI_Portrait_Laura>>
+"Nevermind, have a good day!"
+<<ChangePortrait Portrait UI_Portrait_SlumCapMale2>>
+"Same to you! See you around!"
 <<endif>>
 ===
